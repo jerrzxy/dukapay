@@ -1,7 +1,7 @@
 {
   "name": "@dukapay/sdk",
   "version": "0.1.0",
-  "description": "TypeScript SDK for the DukaPay lending & remittance protocol — typed API client, wallet adapters, contract helpers and React hooks.",
+  "description": "TypeScript SDK for the DukaPay lending & remittance protocol \u2014 typed API client, wallet adapters, contract helpers and React hooks.",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -24,11 +24,15 @@
       "require": "./dist/react/index.cjs"
     }
   },
-  "files": ["dist", "README.md", "CHANGELOG.md"],
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md"
+  ],
   "sideEffects": false,
   "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch",
+    "build": "node init && tsup",
+    "dev": "node init && tsup --watch",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "lint": "eslint src"
@@ -37,7 +41,9 @@
     "react": ">=18"
   },
   "peerDependenciesMeta": {
-    "react": { "optional": true }
+    "react": {
+      "optional": true
+    }
   },
   "dependencies": {
     "@stellar/freighter-api": "^6.0.1"
